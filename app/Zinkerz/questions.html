@@ -1,0 +1,24 @@
+<main>
+    <div class="container-question">
+        <div class="question-header">
+            <div>Diagnostic Test : English</div>
+            <div><a href="#/home">Quit</a></div>
+        </div>
+        <div class="question" ng-hide="questionsOver">
+            <h1>{{questions[currentQuestion].question}}</h1>
+            <ul>
+                <li class="opt" ng-repeat="answer in questions[currentQuestion].answers" ng-click="userAnswered(answer)"
+                    ng-class="{correct:answer.showCorrect,wrong:answer.userWrong}">
+                    <div class="answers">
+                        <div>{{letters[$index]}}</div>
+                        {{answer.txt}}
+                    </div>
+                </li>
+            </ul>
+            <button class="btn btn-success" ng-show="userSawAnswer" ng-click="nextQuestion()">{{buttonInfo}}</button>
+        </div>
+        <div class="statistics" ng-show="questionsOver">You got {{correctAnswers}} correct answers out of
+            {{questions.length}} questions.
+        </div>
+    </div>
+</main>

@@ -1,0 +1,114 @@
+.content-zinkerz {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 465px;
+  background-color: #FF931E;
+  .info-zinkerz {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    .mini-nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 400px;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      font-size: 2em;
+    }
+  }
+}
+
+main {
+  background-color: #F2F2F2;
+  .container-question {
+    width: 95%;
+    height: 465px;
+    background-color: white;
+    margin: auto;
+    .question-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      height: 40px;
+      padding: 1em;
+      color: whitesmoke;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background-image: url("../img/header.JPG");
+      a {
+        text-decoration: none;
+        color: whitesmoke;
+      }
+    }
+    .question {
+      h1 {
+        font-weight: bolder;
+        margin-left: 40px;
+        margin-bottom: 30px;
+      }
+      ul {
+        list-style: none;
+        .opt {
+          &.correct {
+            color: #0A9BAD;
+            .answers {
+              div {
+                color: whitesmoke;
+                background-color: #0A9BAD;
+              }
+            }
+          }
+          &.wrong {
+            color: red;
+            .answers {
+              div {
+                color: whitesmoke;
+                background-color: red;
+              }
+            }
+          }
+          .answers {
+            display: flex;
+            flex-direction: row;
+            height: 2em;
+            margin-bottom: 30px;
+            align-items: center;
+            &.correct {
+              color: #0A9BAD;
+            }
+            div {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              border: 1px solid black;
+              margin-right: 20px;
+              background-color: #F2F2F2;
+              .correct {
+                color: #0A9BAD;
+              }
+            }
+          }
+        }
+      }
+    }
+    button {
+      margin-left: 2.5em;
+    }
+    .statistics {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 200px;
+      background-color: #00b3ee;
+      font-size: 2em;
+    }
+  }
+}

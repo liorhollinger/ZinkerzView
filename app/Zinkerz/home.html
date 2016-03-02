@@ -1,0 +1,28 @@
+<div class="content-zinkerz">
+    <div class="info-zinkerz">
+        <img src="img/large.png"/>
+
+        <div class="mini-nav">
+            <p ng-hide="showInstructions">
+                Improve Your TOEFL&#174 Test Score!
+                The only app that covers all four areas of the
+                TOEFL&#174 test: reading, writing, listening and speaking.
+            </p>
+
+            <p ng-show="showInstructions">
+                Every TOEFL&#174 question has only one correct answer.
+                Try to answer as fast as you can in order to simulate the real test.
+                GOOD LUCK!!!
+            </p>
+
+            <div class="buttons">
+                <button ng-click="showInstructions = !showInstructions"
+                        ng-class="{'btn btn-info':!showInstructions,'btn btn-danger':showInstructions}">Instructions
+                </button>
+                <a href="#/questions" class="btn btn-success">LET'S GO!!!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
